@@ -1,0 +1,58 @@
+apt install lvm2
+lsblk
+fdisk /dev/sdb
+cls
+clear
+lsblk
+fdisk /dev/sdc
+lsblk
+clear
+pvs
+vgs
+lvs
+lsblk
+fdisk /dev/sdd
+lsblk
+pvcreate /dev/sdb1
+lsblk
+pvcreate /dev/sdb1
+clear
+lsblk
+history ;;;::__ÑÑ[[
+history > history.txt
+cat history.txt
+apt install git
+history -a
+apt update && apt upgrade
+apt install lvm2
+lsblk
+fdisk /dev/sdb
+lsblk
+fdisk /dev/sdc
+lsblk
+fdisk /dev/sdd
+lsblk
+pvcreate /dev/sdb1
+pvs
+pvcreate /dev/sdc1
+pvs
+pvcreate /dev/sdd1
+pvs
+vgcreate datos /dev/sdb1 /dev/sdc1 /dev/sdd1
+vgs
+lvcreate -L 1G -n www datos
+lvs
+lvcreate -L 4G -n salvas datos
+lvs
+mkfs.ext4 /dev/datos/www
+mkfs.ext4 /dev/datos/salvas
+mkdir /mnt/disco1
+mount /dev/datos/www /mnt/disco1
+lsblk
+vgs
+lvextend -L +1G /dev/datos/www
+lvs
+lsblk
+resize2fs /dev/datos/www
+lsblk
+history -a
